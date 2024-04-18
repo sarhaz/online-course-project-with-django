@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+{%load static%}
+{%block content%}
+        <form method="post">
+            {%csrf_token%}
+            <label for="name"></label>
+            <input id="name" placeholder="name" name="name" value="{{course.name}}"> <br> <br>
+
+            <label for="description"></label>
+            <input id="description" placeholder="description" name="description" value="{{course.description}}"> <br> <br>
+
+            <label for="price"></label>
+            <input id="price" placeholder="price" name="price" value="{{course.price}}"> <br> <br>
+
+            <label for="image"></label>
+            <input id="image" placeholder="image" name="image" type="file"> <br> <br>
+
+            <button type="submit">Update</button>
+        </form>
+    </div>
+{%endblock%}
